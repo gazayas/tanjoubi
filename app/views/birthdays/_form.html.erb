@@ -1,0 +1,29 @@
+<%= form_for(@birthday) do |f| %>
+  <% if @birthday.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@birthday.errors.count, "error") %> prohibited this birthday from being saved:</h2>
+
+      <ul>
+      <% @birthday.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <br/><br/>
+
+  <div class="field">
+    <h1>名前：</h1>
+    <%= f.text_field :namae %>
+  </div>
+  <div class="field">
+    <h1>日付：</h1>
+    <%= f.text_field :hidzuke %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
