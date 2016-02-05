@@ -4,7 +4,8 @@ class BirthdaysController < ApplicationController
   # GET /birthdays
   # GET /birthdays.json
   def index
-    @birthdays = Birthday.all
+    # @birthdays = Birthday.all
+    @birthdays = Birthday.order(hidzuke: :desc)
   end
 
   # GET /birthdays/1
