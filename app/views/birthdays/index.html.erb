@@ -19,9 +19,9 @@
         <td><%= birthday.namae %></td>
         <td><%= birthday.month %>月</td>
         <td><%= birthday.day %>日</td>
-        <td><%= link_to 'Show', birthday %></td>
-        <td><%= link_to 'Edit', edit_birthday_path(birthday) %></td>
-        <td><%= link_to 'Destroy', birthday, method: :delete, data: { confirm: '本当に削除したいですか？' } %></td>
+        <td><%= link_to '表示', birthday %></td>
+        <td><%= link_to '編集', edit_birthday_path(birthday) %></td>
+        <td><%= link_to '削除', birthday, method: :delete, data: { confirm: '本当に削除したいですか？' } %></td>
       </tr>
     <% end %>
   </tbody>
