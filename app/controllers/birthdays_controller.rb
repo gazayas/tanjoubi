@@ -4,8 +4,8 @@ class BirthdaysController < ApplicationController
   # GET /birthdays
   # GET /birthdays.json
   def index
-    # @birthdays = Birthday.all
-    @birthdays = Birthday.order(hidzuke: :desc)
+    #@birthdays = Birthday.all
+    @birthdays = Birthday.order(day: :asc).reorder(month: :asc)
   end
 
   # GET /birthdays/1
@@ -70,6 +70,6 @@ class BirthdaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def birthday_params
-      params.require(:birthday).permit(:namae, :hidzuke)
+      params.require(:birthday).permit(:namae, :month, :day)
     end
 end

@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <h1>誕生日</h1>
+月順なんですけど日順はうまく並んでない
 
 <table>
   <thead>
     <tr>
       <th>名前：</th>
-      <th>日付：</th>
+      <th>月：</th>
+      <th>日：</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +17,8 @@
     <% @birthdays.each do |birthday| %>
       <tr>
         <td><%= birthday.namae %></td>
-        <td><%= birthday.hidzuke %></td>
+        <td><%= birthday.month %>月</td>
+        <td><%= birthday.day %>日</td>
         <td><%= link_to 'Show', birthday %></td>
         <td><%= link_to 'Edit', edit_birthday_path(birthday) %></td>
         <td><%= link_to 'Destroy', birthday, method: :delete, data: { confirm: '本当に削除したいですか？' } %></td>
