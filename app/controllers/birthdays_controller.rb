@@ -4,8 +4,15 @@ class BirthdaysController < ApplicationController
   # GET /birthdays
   # GET /birthdays.json
   def index
-    #@birthdays = Birthday.all
-    @birthdays = Birthday.order(day: :asc).reorder(month: :asc)
+    # @birthdays = Birthday.order(month: :asc)
+    # ここでまた @birthdays を order するけど、普通のルビーコードで
+    # @birthdays.each do 〜 みたいな文
+    # @birthdays = Birthday.order(day: :asc).reorder(month: :asc)
+    # @birthdays = Birthday.order(month: :asc)
+    @birthdays = Birthday.order(month: :asc, day: :asc)
+
+
+
   end
 
   # GET /birthdays/1
